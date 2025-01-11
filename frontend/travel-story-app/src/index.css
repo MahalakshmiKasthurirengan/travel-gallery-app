@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdp-root {
+  --rdp-accent-color: #ec4899;
+  --rdp-accent-background-color: #d7b2c5; /* Default light gray background */
+  --rdp-day_button-border-radius: 8px;
+  --rdp-selected-font: bold medium var(--rdp-font-family);
+}
+@layer base {
+
+  html{
+    font-family: 'Fredoka', 'sans-serif';
+  }
+  body{
+    background-color: #fdfeff;
+    overflow-x: hidden;
+  }
+}
+/* Customize */
+.scrollbar::-webkit-scrollbar{
+  width: 3px;
+  height: 3px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+  background-color: deeppink;
+  border-radius: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-track{
+  background-color: rgb(233, 196, 216);
+}
+
+
+@layer components{
+  .input-box{
+    @apply w-full text-sm bg-pink-600/5 rounded px-5 py-3 mb-4 outline-none;
+  }
+
+  .btn-primary{
+    @apply w-full text-sm font-medium text-white bg-primary shadow-lg shadow-pink-200/50 p-[10px] rounded-full hover:bg-pink-200 hover:text-primary;
+  }
+
+  .btn-light{
+    @apply bg-pink-200 text-primary shadow-pink-100/0 border border-pink-300 hover:bg-primary hover:text-white;
+  }
+
+  .login-ui-box{
+    @apply w-80 h-[450px] rounded-full bg-primary absolute rotate-45;
+  }
+
+  .icon-btn{
+    @apply text-[22px] text-slate-300 cursor-pointer hover:text-red-500;
+  }
+
+  .model-box{
+    @apply w-[80vw] md:w-[40%] h-[80vh] bg-white rounded-lg mx-auto mt-14 p-5 overflow-y-scroll scrollbar z-50;
+  }
+
+  .input-label{
+    @apply text-xs text-slate-400;
+  }
+
+  .btn-small{
+    @apply flex items-center gap-1 text-xs font-medium bg-pink-50 text-primary shadow-pink-100/0 border-pink-300 hover:bg-primary hover:text-white rounded px-3 py-[3px];
+  }
+
+  .btn-delete{
+    @apply bg-red-50 text-red-500 shadow-red-100/0 border border-red-100 hover:bg-red-500 hover:text-white;
+  }
+}
+.travel-logo-font{
+  font-family: "Dancing Script", serif;
+}
